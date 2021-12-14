@@ -11,8 +11,6 @@ The destination file for each template is provided in a directive as the first l
 #~ target: /path/to/config.file
 ```
 
-## Usage
-
 The standard cloudtruth CLI parameters are used to control which templates are processed:
 
 | Parameter | Description | Type | Default | Required |
@@ -20,3 +18,9 @@ The standard cloudtruth CLI parameters are used to control which templates are p
 | CLOUDTRUTH_API_KEY | the api key for authenticating to the CloudTruth Rest API | string | n/a | yes |
 | CLOUDTRUTH_ENVIRONMENT | the CloudTruth environment to query against | string | `default` | no |
 | CLOUDTRUTH_PROJECT | the CloudTruth project to query against | string | `MyFirstProject` | yes |
+
+Run with docker:
+
+```
+$ docker run -e CLOUDTRUTH_PROJECT=YOUR_PROJECT -e CLOUDTRUTH_API_KEY cloudtruth/templates 
+```
